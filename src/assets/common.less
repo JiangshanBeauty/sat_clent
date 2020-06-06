@@ -1,0 +1,151 @@
+// 默认值
+@c_primary: #3f5173; // 全局默认主色
+@c_link: #1890ff; // 链接色
+@c_success: #52c41a; // 成功色
+@c_warning: #faad14; // 警告色
+@c_error: #f5222d; // 错误色
+@c_heading: rgba(0, 0, 0, 0.85); // 标题色
+@c_text: rgba(0, 0, 0, 0.65); // 主文本色
+@c_text_secondary: rgba(0, 0, 0, .45); // 次文本色
+@c_disabled: rgba(0, 0, 0, .25); // 失效色
+@c_border: #d9d9d9; // 边框色
+@c_box_shadow: rgba(0, 0, 0, 0.15); // 浮层阴影色
+@c_background_color: #f0f1f2; //底色
+@c_divider_color: #d9d9d9; //分割线
+
+
+@font_size_base: 14px; // 主字号
+@border_radius_base: 4px; // 组件/浮层圆角
+@box_shadow_base: 0 2px 8px @c_box_shadow; // 浮层阴影 
+
+@min_width: 1200px;
+
+
+
+:global(.c_primary) {
+  color: @c_primary;
+}
+
+:global(.c_link) {
+  color: @c_link;
+}
+
+:global(.c_success) {
+  color: @c_success;
+}
+
+:global(.c_warning) {
+  color: @c_warning;
+}
+
+:global(.c_error) {
+  color: @c_error;
+}
+
+:global(.c_heading) {
+  color: @c_heading;
+}
+
+:global(.c_text) {
+  color: @c_text;
+}
+
+:global(.c_text_secondary) {
+  color: @c_text_secondary;
+}
+
+:global(.c_disabled) {
+  color: @c_disabled;
+}
+
+:global(.c_border) {
+  border: 1px solid @c_border;
+}
+
+:global(.c_box_shadow) {
+  box-shadow: @box_shadow_base;
+}
+
+:global(.c_background_color) {
+  background-color: @c_background_color;
+}
+
+:global(::-webkit-scrollbar) {
+  width: 5px;
+  height: 5px;
+  background-color: #e6e4e4;
+}
+
+:global(::-webkit-scrollbar-thumb) {
+  background-color: #a8a8a8;
+}
+
+
+
+:global(.cle:after) {
+  content: " ";
+  display: block;
+  width: 100%;
+  clear: both;
+}
+
+:global(.dot) {
+  text-overflow: ellipsis;
+  /* 超出部分显示省略号 */
+  white-space: nowrap;
+  /*规定段落中的文本不进行换行 */
+  overflow: hidden;
+}
+
+/* 撑满 */
+:global(.brace_up) {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+
+/* 回到顶部 */
+:global(.ant-back-top) {
+  right: 60px;
+  bottom: 10px;
+}
+
+/* 分割线 */
+:global(.ant-divider) {
+  margin: 5px 0;
+  color: @c_divider_color;
+}
+
+/* 列表 */
+// :global(.ant-list-item) {
+//   display: block;
+// }
+
+.brace_up_1 {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+:global(html) {
+  .brace_up_1();
+  overflow: hidden;
+
+}
+
+:global(body) {
+  .brace_up_1();
+  overflow: hidden;
+  background: #f0f1f2;
+
+}
+
+:global(#root) {
+  .brace_up_1();
+
+}
