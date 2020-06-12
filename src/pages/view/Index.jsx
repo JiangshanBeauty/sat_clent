@@ -2,7 +2,10 @@
 import React from 'react'
 import { connect } from 'dva';
 
-class Demo extends React.Component {
+import styles from '../../assets/styles.less'
+import MapboxView from '../components/mapBox/Mapbox'
+
+class IndexView extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -19,7 +22,20 @@ class Demo extends React.Component {
 
     render() {
         return (
-            <div>123123123</div>
+            <div className={styles.view_index}>
+                <div className={styles.view_left}>
+                    左边
+                </div>
+                <div className={styles.view_right}>
+                    右边
+                </div>
+                <div className={styles.view_footer}>
+                    下边
+                </div>
+                <div className={styles.view_con}>
+                    <MapboxView/>
+                </div>
+            </div>
         )
     }
 }
@@ -28,4 +44,4 @@ export default connect(
     state => ({
 
     })
-)(Demo);
+)(IndexView);

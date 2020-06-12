@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { connect } from 'dva';
 // import router from 'umi/router';
 
-import '../assets/common.less';
+// import '../assets/common.less';
 
 import zhCN from 'antd/lib/locale-provider/zh_CN';
 import { ConfigProvider } from 'antd';
